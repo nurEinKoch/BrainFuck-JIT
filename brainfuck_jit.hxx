@@ -16,10 +16,6 @@ class brainfuck_jit {
 
     public:
 
-    enum instruction {
-        save_cell = 0,
-
-    };
 
     brainfuck_jit(unsigned char* code_buf, int(*putchar_)(int c), int (*getchar)()):code(code_buf), putc(putchar_), getc(getchar), address(0), top_ret(-1){};
     void finalize();

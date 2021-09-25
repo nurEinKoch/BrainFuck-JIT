@@ -68,16 +68,6 @@ void brainfuck_jit::emit_ ## _i() { \
 
 
 
-#define MAX_INSTR_LEN 10
-
-unsigned char instructions[][MAX_INSTR_LEN] = {
-    {0x48, 0x8b, 0x7c, 0x24, 0xf8}
-};
-int instr_lens[] = {
-    sizeof(instructions[0])
-};
-
-
 void brainfuck_jit::finalize() {
     emit_putcell();
     emit_recoverSP();
